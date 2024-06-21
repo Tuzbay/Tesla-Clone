@@ -1,0 +1,34 @@
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1.4rem;
+  padding-bottom: 1rem;
+  font-size: 12px;
+
+  .footer__top {
+    .footer__top-span {
+      margin-top: 0.2rem;
+      border-bottom: 1px solid white;
+      cursor: pointer;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .footer__bottom {
+    display: flex;
+    gap: 1rem;
+    li {
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+}

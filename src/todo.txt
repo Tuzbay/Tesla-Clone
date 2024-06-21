@@ -1,0 +1,4 @@
+
+1- Scroll eventleri düzenlenecek. Scrollarda navbar renk değiştirmiyor. O sorun düzeltilecek. Ayrıca wheel eventinden scroll eventine geçilerek bu yapılacak.
+
+2- Megamenünün height özelliği max-contente göre yapılacak.

@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../../../assets/FontsFree-Net-GothamLight.ttf') format('truetype');
+}
+
+.navbar__container {
+  min-height: 60px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0 50px;
+  margin: 0px auto;
+  font-family: 'Gotham', sans-serif;
+
+  .megaMenuNavbar,
+  .languageMenuNavbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    z-index: -1;
+    padding-top: 5rem;
+    color: black;
+  }
+
+  .languageMenuNavbar {
+    height: 700px;
+    padding-top: 0;
+    overflow-y: scroll;
+  }
+
+  .navbar__menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      text-transform: capitalize;
+      flex-wrap: nowrap;
+      list-style-type: none;
+      cursor: pointer;
+      padding: 6px 15px;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: 0.3s ease all;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+  .navbar__rightmenu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    li {
+      cursor: pointer;
+
+      &:hover .menu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
