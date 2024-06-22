@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import './section.scss';
 import model3 from '../../assets/Tesla1Video.mp4';
@@ -14,8 +14,6 @@ function Section({
   rightBtnText,
   footerText,
   footerTextDetail,
-  footer,
-  marginTop,
   specialButton,
   specialButtonBorder,
   specialButtonBorderFull,

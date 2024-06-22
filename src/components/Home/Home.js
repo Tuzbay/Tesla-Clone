@@ -4,7 +4,6 @@ import Section from '../Section/Section';
 const Home = ({ marginTop }) => {
   const containerStyle = {
     marginTop: `${marginTop}px`,
-    // zIndex: 0,
   };
 
   return (
@@ -17,8 +16,6 @@ const Home = ({ marginTop }) => {
         backgroundImg="model3.avif"
         leftBtnText="Order Now"
         rightBtnText="Demo Drive"
-        // footerText="*Price before incentives and savings is $40,240, excluding taxes and fees. Subject to change."
-        // footerTextDetail="Learn about est. gas savings."
         marginTop={marginTop}
       />
       <Section
@@ -29,8 +26,6 @@ const Home = ({ marginTop }) => {
         backgroundImg="model-y.avif"
         leftBtnText="Order Now"
         rightBtnText="Demo Drive"
-        // footerText="*Price before incentives and savings is $47,740, excluding taxes and fees. Subject to change."
-        // footerTextDetail="Learn about est. gas savings."
         marginTop={marginTop}
       />
       <Section
@@ -41,8 +36,6 @@ const Home = ({ marginTop }) => {
         backgroundImg="modelX.avif"
         leftBtnText="Order Now"
         rightBtnText="Demo Drive"
-        // footerText="*Price before savings is $74,990, excluding taxes and fees. Subject to change."
-        // footerTextDetail="Learn about est. gas savings."
         marginTop={marginTop}
       />
       <Section
@@ -54,15 +47,10 @@ const Home = ({ marginTop }) => {
         leftBtnText="Order Now"
         whiteText
         rightBtnText="Demo Drive"
-        // footerText="*Price before incentives and savings is $79,990, excluding taxes and fees. Subject to change."
-        // footerTextDetail="Learn about est. gas savings."
         marginTop={marginTop}
       />
       <Section
-        // type="video1"
         type="photo"
-        // title="Cybertruck"
-        // smallText="Schedule a Demo Drive Today"
         backgroundImg="cybertruck.avif"
         leftBtnText="Order Now"
         rightBtnText="Learn More"

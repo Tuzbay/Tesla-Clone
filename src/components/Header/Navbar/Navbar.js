@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './navbar.scss';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -8,7 +8,6 @@ import Fade from 'react-reveal/Fade';
 import Language from '../../Language/Language';
 
 const Navbar = ({ openLanguage, setOpenLanguage }) => {
-  const [scrolling, setScrolling] = useState(false);
   const [hover, setHover] = useState({
     vehicles: false,
     energy: false,
@@ -17,35 +16,8 @@ const Navbar = ({ openLanguage, setOpenLanguage }) => {
     shop: false,
   });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // if (
-      //   window.scrollY <= 675 ||
-      //   (window.scrollY >= 2730 && window.scrollY < 3400)
-      // ) {
-      //   setScrolling(false);
-      // } else {
-      //   setScrolling(true);
-      // }
-      // console.log(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    // * Performans için sorunlar yaşamamak amacıyla remove event yapıyoruz. * \\
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // const navbarStyle = {
-  //   color: scrolling || hover || openLanguage ? 'black' : 'white',
-  // };
-
   const handleMouseEnter = (hoverType) => {
     setHover(hoverType);
-  };
-
-  const handleMouseLeave = () => {
-    setHover('');
   };
 
   return (
@@ -54,7 +26,6 @@ const Navbar = ({ openLanguage, setOpenLanguage }) => {
         <img src="/images/logo.svg" alt="Tesla Logo" />
       </a>
       <div className="navbar__menu">
-        {/* <ul style={navbarStyle}> */}
         <ul>
           <li onMouseEnter={() => handleMouseEnter('vehicles')}>Vehicles</li>
           <li onMouseEnter={() => handleMouseEnter('energy')}>Energy</li>
@@ -69,7 +40,7 @@ const Navbar = ({ openLanguage, setOpenLanguage }) => {
           <div
             className="megaMenuNavbar"
             onMouseEnter={() => handleMouseEnter(hover)}
-            onMouseLeave={handleMouseLeave}
+            onMouseLeave={() => setHover('')}
           >
             <MegaMenu openedMenuItem={hover} />
           </div>
@@ -86,7 +57,6 @@ const Navbar = ({ openLanguage, setOpenLanguage }) => {
 
       <div className="navbar__rightmenu">
         <ul>
-          {/* <ul style={navbarStyle}> */}
           <li>
             <HelpOutlineIcon />
           </li>
